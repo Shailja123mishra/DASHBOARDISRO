@@ -9,13 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: sans-serif;
-        }
-        .container {
-            display:flex;
-            justify-content:center;
-            flex-wrap: wrap;
-            padding:20px;
-            margin-top:20px;
+            background-color: lightskyblue;
         }
         
         .sidebar {
@@ -76,13 +70,13 @@
             padding: 20px 0;
             text-align: center;
             width: 100%;
-            z-index: 999; /* Ensures the navbar stays below the black navbar */
+            z-index: 999; 
             top: 60px;
-            margin-bottom: 20px; /* Adjust the top position to place it below the black navbar */
+            margin-bottom: 20px; 
         }
         .globe container{
             text-align: center;
-            margin-top: 10px;
+            margin-top: 5px;
             margin-bottom: 20px;
         
         }
@@ -90,6 +84,15 @@
             width: 100%;
             height:300px;
             border:none;
+        }
+        .container {
+            display:flex;
+            justify-content:center;
+            flex-wrap: wrap;
+            padding:20px;
+            margin-top:20px;
+            padding-top: 10px;
+            margin-left:200px;
         }
         .dropdown {
             position: relative;
@@ -133,18 +136,48 @@
         }
 
         .box{
-            width:100px;
-            height:100px;
-            background-color:rgb(89, 141, 76);
+            width:450px;
+            height:450px;
+            background-color:rgb(171, 151, 176);
             border-radius: 5px;
+            margin:10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             transition: box-shadow 0.3s;
+            box-sizing: border-box;
+            position:relative;
+            overflow: hidden;
         }
         .box:hover{
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
         .box-content {
             padding:20px;
+        }
+        .box-buttons {
+            position: absolute;
+            top:10px;
+            right:10px;
+            display: none;
+        }
+        .box:hover .box-buttons {
+            display:block;
+        }
+        @media screen and (max-width: 768px) {
+            .container{
+                margin-left:0; 
+            }
+        }
+        .box-button {
+            cursor: pointer;
+            padding:5px;
+            background-color:fuchsia;
+            color:midnightblue;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            margin-left:5px;
+        }
+        .box-button:hover {
+            background-color:teal;
         }
     </style>
 </head>
@@ -154,19 +187,6 @@
         <a href="#">link 1</a>
         <a href="#">link 2</a>
         <a href="#">link 3</a>
-    </div>
-
-    <div class="container">
-        <div class = "box">
-            <div class = "box-content">
-                box 1 content
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                box 2 content 
-            </div>
-        </div>
     </div>
 
 <nav class="navbar-black">
@@ -187,7 +207,7 @@
     </div>
 </nav>
 <div class="globe-container">
-    <iframe src="https://giphy.com/embed/2zowfWNIqpOkO6Oa9n" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></><p><a href="https://giphy.com/gifs/EuropeanSpaceAgency-animation-space-2zowfWNIqpOkO6Oa9n">via GIPHY</a></p>"your-globe.gif alt="moving globe"></iframe>
+    <iframe src="https://giphy.com/embed/2zowfWNIqpOkO6Oa9n" width="380" height="150" frameBorder="0" class="giphy-embed" allowFullScreen></><p><a href="https://giphy.com/gifs/EuropeanSpaceAgency-animation-space-2zowfWNIqpOkO6Oa9n">via GIPHY</a></p>"your-globe.gif alt="moving globe"></iframe>
 </div>
 
 <!-- Add content below the navbars to prevent them from overlapping -->
